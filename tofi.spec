@@ -42,5 +42,18 @@ export DESTDIR=%{buildroot}
 ninja -C _build/ install
 
 %files
+/etc/xdg/tofi/config
+/usr/bin/tofi
+/usr/bin/tofi-drun
+/usr/bin/tofi-run
+/usr/lib/debug/usr/bin/tofi-0.6.0-1.fc37.x86_64.debug
+/usr/share/bash-completion/completions/tofi
+/usr/share/bash-completion/completions/tofi-drun
+/usr/share/bash-completion/completions/tofi-run
+/usr/share/licenses/tofi/LICENSE
+/usr/share/man/man1/tofi-drun.1.gz
+/usr/share/man/man1/tofi-run.1.gz
+/usr/share/man/man1/tofi.1.gz
+/usr/share/man/man5/tofi.5.gz
 
 %changelog
