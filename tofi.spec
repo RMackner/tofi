@@ -55,3 +55,4 @@ ninja -C _build/ install
 /usr/share/man/man5/tofi.5.gz
 
 %changelog
+%autochangelog
