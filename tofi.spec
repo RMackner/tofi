@@ -34,10 +34,12 @@ BuildRequires:  libxkbcommon-devel
 %setup
 
 %build
-meson build
+meson _build
+ninja -C _build/
 
 %install
-ninja -C build install
+export DESTDIR=%{buildroot}
+ninja -C _build/ install
 
 %files
 
