@@ -18,6 +18,7 @@ BuildRequires:  meson
 BuildRequires:  git
 BuildRequires:  scdoc
 BuildRequires:  wayland-protocols-devel
+BuildRequires:  wayland-devel
 
 %description
 %{summary}
