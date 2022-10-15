@@ -35,10 +35,10 @@ BuildRequires:  libxkbcommon-devel
 %setup
 
 %build
-meson build
+%meson_build
 
 %install
-ninja -C build install
+%meson_install
 
 %files
 
