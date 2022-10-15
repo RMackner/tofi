@@ -7,11 +7,9 @@ URL:            https://github.com/philj56/tofi
 Source0:        https://github.com/RMackner/tofi/blob/main/0.6.0.tar.gz
 Conflicts:      tofi
 
-Requires: freetype2
 Requires: harfbuzz
 Requires: cairo
 Requires: pango
-Requires: wayland
 Requires: libxkbcommon
 
 BuildRequires:  meson
