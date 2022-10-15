@@ -4,7 +4,8 @@ Release:        %autorelease
 Summary:        An extremely fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors
 License:        MIT
 URL:            https://github.com/philj56/tofi
-Source0:        https://github.com/philj56/tofi/archive/refs/tags/v0.6.0.tar.gz
+#Source0:        https://github.com/philj56/tofi/archive/refs/tags/v0.6.0.tar.gz
+Source0:        %{url}/archive/refs/tags/v%{name}%{version}.tar.gz
 Conflicts:      tofi
 
 Requires: harfbuzz
