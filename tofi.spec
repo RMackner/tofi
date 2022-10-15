@@ -27,7 +27,7 @@ BuildRequires:  wayland-protocols
 %{summary}
 
 %prep
-%autosetup -n
+%autosetup -p 1 -c
 
 %build
 meson --prefix /usr -Dbuildtype=release build
