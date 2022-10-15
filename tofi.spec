@@ -20,6 +20,7 @@ BuildRequires:  scdoc
 BuildRequires:  wayland-protocols-devel
 BuildRequires:  wayland-devel
 BuildRequires:  cairo-devel
+BuildRequires:  glibc-devel
 
 %description
 %{summary}
