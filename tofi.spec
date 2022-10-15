@@ -1,7 +1,3 @@
-%global basever 0.6.0
-%global prerel  beta
-%global tag     v%{basever}%{?prerel}
-
 Name:           tofi
 Version:        0.6.0
 Release:        %autorelease
