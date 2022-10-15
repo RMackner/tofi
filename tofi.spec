@@ -19,6 +19,7 @@ BuildRequires:  git
 BuildRequires:  scdoc
 BuildRequires:  wayland-protocols-devel
 BuildRequires:  wayland-devel
+BuildRequires:  cairo-devel
 
 %description
 %{summary}
