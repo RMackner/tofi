@@ -1,10 +1,14 @@
+%global basever 0.6.0
+%global prerel  beta
+%global tag     v%{basever}%{?prerel}
+
 Name:           tofi
 Version:        0.6.0
-Release:        7.git
+Release:        %autorelease
 Summary:        An extremely fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors
 License:        MIT
 URL:            https://github.com/philj56/tofi
-#Source0:        %{url}/releases/download/%{tag}/source-%{tag}.tar.gz
+Source0:        %{url}/releases/download/%{tag}/source-%{tag}.tar.gz
 Conflicts:      tofi
 
 Requires: freetype2
