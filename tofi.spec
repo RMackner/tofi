@@ -21,6 +21,7 @@ BuildRequires:  wayland-protocols-devel
 BuildRequires:  wayland-devel
 BuildRequires:  cairo-devel
 BuildRequires:  glibc-devel
+BuildRequires:  pango-devel
 
 %description
 %{summary}
