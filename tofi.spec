@@ -5,7 +5,7 @@ Summary:        An extremely fast and simple dmenu / rofi replacement for wlroot
 License:        MIT
 URL:            https://github.com/philj56/tofi
 #Source0:        https://github.com/philj56/tofi/archive/refs/tags/v0.6.0.tar.gz
-Source0:        %{url}/archive/refs/tags/v%{name}%{version}.tar.gz
+Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 Conflicts:      tofi
 
 Requires: harfbuzz
