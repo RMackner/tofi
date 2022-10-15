@@ -34,8 +34,7 @@ BuildRequires:  libxkbcommon-devel
 %setup
 
 %build
-meson --prefix /usr -Dbuildtype=release build
-ninja -C build
+meson build
 
 %install
 ninja -C build install
