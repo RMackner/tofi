@@ -17,7 +17,7 @@ Requires: libxkbcommon
 BuildRequires:  meson
 BuildRequires:  git
 BuildRequires:  scdoc
-BuildRequires:  wayland-protocols
+BuildRequires:  wayland-protocols-devel
 
 %description
 %{summary}
