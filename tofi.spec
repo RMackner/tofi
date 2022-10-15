@@ -22,6 +22,7 @@ BuildRequires:  wayland-devel
 BuildRequires:  cairo-devel
 BuildRequires:  glibc-devel
 BuildRequires:  pango-devel
+BuildRequires:  libxkbcommon-devel
 
 %description
 %{summary}
