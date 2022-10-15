@@ -15,7 +15,6 @@ Requires: wayland
 Requires: libxkbcommon
 
 BuildRequires:  meson
-BuildRequires:  ninja-build
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  cmake
