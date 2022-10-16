@@ -44,7 +44,7 @@ ninja -C _build/ install
 /usr/bin/tofi
 /usr/bin/tofi-drun
 /usr/bin/tofi-run
-/usr/lib/debug/usr/bin/tofi-0.6.0-1.fc37.x86_64.debug
+/usr/lib/debug/usr/bin/tofi-0.6.0-1.fc*
 /usr/share/bash-completion/completions/tofi
 /usr/share/bash-completion/completions/tofi-drun
 /usr/share/bash-completion/completions/tofi-run
