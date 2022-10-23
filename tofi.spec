@@ -4,7 +4,7 @@
 
 
 Name:           tofi
-Version:        0.6.0.git.%{shorthash}%{?dist}
+Version:        4.git.%{shorthash}%{?dist}v0.6.0
 Release:        %autorelease
 Summary:        An extremely fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors
 License:        MIT
