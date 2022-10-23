@@ -1,10 +1,15 @@
+%define githash 5200786c42e17eda4e85684a263ace5abc9a1266
+
+%define shorthash %(c=%{githash}; echo ${c:0:10})
+
+
 Name:           tofi
-Version:        0.6.0
+Version:        1.git.%{shorthash}%{?dist}
 Release:        %autorelease
 Summary:        An extremely fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors
 License:        MIT
 URL:            https://github.com/philj56/tofi
-Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
+Source0:        %{url}/archive/%{githash}/%{name}-%{githash}.tar.gz
 Conflicts:      tofi
 
 Requires: harfbuzz
@@ -29,7 +34,7 @@ BuildRequires:  libxkbcommon-devel
 %{summary}
 
 %prep
-%setup
+%autosetup -n %{name}-%{githash}
 
 %build
 meson _build
@@ -41,18 +46,12 @@ ninja -C _build/ install
 
 %files
 /etc/xdg/tofi/config
-/usr/bin/tofi
-/usr/bin/tofi-drun
-/usr/bin/tofi-run
+/usr/bin/*
 /usr/lib/debug/usr/bin/tofi-0.6.0-1.fc*
-/usr/share/bash-completion/completions/tofi
-/usr/share/bash-completion/completions/tofi-drun
-/usr/share/bash-completion/completions/tofi-run
+/usr/share/bash-completion/completions/*
 /usr/share/licenses/tofi/LICENSE
-/usr/share/man/man1/tofi-drun.1.gz
-/usr/share/man/man1/tofi-run.1.gz
-/usr/share/man/man1/tofi.1.gz
-/usr/share/man/man5/tofi.5.gz
+/usr/share/man/man1/*
+
 
 %changelog
 %autochangelog
