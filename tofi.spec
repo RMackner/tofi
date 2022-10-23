@@ -47,7 +47,7 @@ ninja -C _build/ install
 %files
 /etc/xdg/tofi/config
 /usr/bin/*
-/usr/lib/debug/usr/bin/tofi-0.6.0-1.fc*
+/usr/lib/debug/usr/bin/tofi*
 /usr/share/bash-completion/completions/*
 /usr/share/licenses/tofi/LICENSE
 /usr/share/man/man1/*
