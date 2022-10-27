@@ -53,8 +53,7 @@ ninja -C _build/ install
 %{_datadir}/bash-completion/completions/%{name}-drun
 %{_datadir}/bash-completion/completions/%{name}-run
 %{_datadir}/licenses/%{name}/LICENSE
-%{_mandir}/man1/%{name}*.gz
-%{_mandir}/man5/%{name}*.gz
+%{_mandir}/man*/%{name}*.gz
 
 
 %changelog
