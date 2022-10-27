@@ -45,12 +45,7 @@ export DESTDIR=%{buildroot}
 ninja -C _build/ install
 
 %files
-/etc/xdg/tofi/*
-/usr/bin/*
-/usr/lib/debug/usr/bin/*
-/usr/share/bash-completion/completions/*
-/usr/share/licenses/*
-/usr/share/man/*
+
 
 
 %changelog
