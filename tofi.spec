@@ -1,10 +1,10 @@
-%define githash 0d779ef6359ff8a66b7c22ca7dee6b6097faa903
+%define githash 89c713a9d5a8ee5cdb0fa728a171231391463fdf
 
 %define shorthash %(c=%{githash}; echo ${c:0:10})
 
 
 Name:           tofi
-Version:        6.git.%{shorthash}v0.6.0
+Version:        7.git.%{shorthash}v0.6.0
 Release:        %autorelease
 Summary:        An extremely fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors
 License:        MIT
