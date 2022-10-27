@@ -45,16 +45,16 @@ export DESTDIR=%{buildroot}
 ninja -C _build/ install
 
 %files
-%{_sysconfdir}/xdg/tofi/config
-%{_bindir}/tofi
-%{_bindir}/tofi-drun
-%{_bindir}/tofi-run
-%{_datadir}/bash-completion/completions/tofi
-%{_datadir}/bash-completion/completions/tofi-drun
-%{_datadir}/bash-completion/completions/tofi-run
-%{_datadir}/licenses/tofi/LICENSE
-%{_mandir}/man1/tofi*.gz
-%{_mandir}/man5/tofi*.gz
+%{_sysconfdir}/xdg/%{name}/config
+%{_bindir}/%{name}
+%{_bindir}/%{name}-drun
+%{_bindir}/%{name}-run
+%{_datadir}/bash-completion/completions/%{name}
+%{_datadir}/bash-completion/completions/%{name}-drun
+%{_datadir}/bash-completion/completions/%{name}-run
+%{_datadir}/licenses/%{name}/LICENSE
+%{_mandir}/man1/%{name}*.gz
+%{_mandir}/man5/%{name}*.gz
 
 
 %changelog
