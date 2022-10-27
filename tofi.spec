@@ -53,8 +53,8 @@ ninja -C _build/ install
 %{_datadir}/bash-completion/completions/tofi-drun
 %{_datadir}/bash-completion/completions/tofi-run
 %{_datadir}/licenses/tofi/LICENSE
-%{_mandir}/man1/tofi.*.gz
-%{_mandir}/man5/tofi.*.gz
+%{_mandir}/man1/tofi*.gz
+%{_mandir}/man5/tofi*.gz
 
 
 %changelog
