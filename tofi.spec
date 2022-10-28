@@ -40,12 +40,12 @@ BuildRequires:  llvm-devel
 %autosetup -n %{name}-%{githash}
 
 %build
-meson build-gcc
+meson build
 CC=clang CXX=clang++ meson build-clang
-meson compile
 
 %install
-%meson_install
+export DESTDIR=%{buildroot}
+ninja -C build install
 
 %files
 %{_sysconfdir}/xdg/%{name}/config
