@@ -42,6 +42,7 @@ BuildRequires:  llvm-devel
 %build
 meson build-gcc
 CC=clang CXX=clang++ meson build-clang
+meson compile
 
 %install
 %meson_install
