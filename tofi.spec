@@ -37,12 +37,11 @@ BuildRequires:  libxkbcommon-devel
 %autosetup -n %{name}-%{githash}
 
 %build
-meson _build
-ninja -C _build/
+meson build-gcc
+CC=clang CXX=clang++ meson build-clang
 
 %install
-export DESTDIR=%{buildroot}
-ninja -C _build/ install
+%meson_install
 
 %files
 %{_sysconfdir}/xdg/%{name}/config
