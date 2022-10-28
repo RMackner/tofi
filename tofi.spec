@@ -44,7 +44,7 @@ CC=clang CXX=clang++ meson build-clang
 
 %install
 export DESTDIR=%{buildroot}
-ninja -C build install
+ninja -C build-clang install
 
 %files
 %{_sysconfdir}/xdg/%{name}/config
