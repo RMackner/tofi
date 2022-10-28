@@ -40,7 +40,6 @@ BuildRequires:  llvm-devel
 %autosetup -n %{name}-%{githash}
 
 %build
-meson build
 CC=clang CXX=clang++ meson build-clang
 
 %install
