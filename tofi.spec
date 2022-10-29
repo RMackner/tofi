@@ -29,8 +29,7 @@ BuildRequires:  cairo-devel
 BuildRequires:  glibc-devel
 BuildRequires:  pango-devel
 BuildRequires:  libxkbcommon-devel
-BuildRequires:  clang
-BuildRequires:  llvm
+BuildRequires:  clang-devel
 BuildRequires:  llvm-devel
 
 %description
