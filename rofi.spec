@@ -4,7 +4,7 @@ Release:       1
 Summary:       A window switcher, run dialog and dmenu replacement - fork with wayland support
 License:       MIT
 URL:           https://github.com/lbonn/%{name}/archive
-Source:        %{url}/refs/tags/%{version}+wayland1.tar.gz
+Source:        %{name}-%{version}.tzr.gz
 
 
 BuildArch: x86_64
@@ -39,7 +39,7 @@ BuildRequires: pkgconfig(xkbcommon-x11)
 %{summary}
 
 %prep
-%autosetup -n %{name}-%{version}-wayland1
+%autosetup -n %{name}-%{version}
 
 %build
 MESON_OPTIONS=(
