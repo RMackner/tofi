@@ -9,7 +9,7 @@ Source:         https://github.com/lbonn/%{name}/archive/refs/tags/%{version}+wa
 BuildRequires:  bison
 BuildRequires:  cairo-devel
 BuildRequires:  cppcheck
-BuildRequires:  flex >= 2.5.39
+BuildRequires:  flex
 BuildRequires:  librsvg2-devel
 BuildRequires:  libxkbcommon-devel
 BuildRequires:  libxkbcommon-x11-devel
