@@ -7,7 +7,7 @@ Version:       1.7.5
 Release:       1.git.%{shorthash}%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement - fork with wayland support
 License:       MIT
-URL:           https://github.com/lbonn/rofi.git
+URL:           https://github.com/lbonn/%{name}/archive
 Source:        ./%{name}-%{githash}.tar.gz
 
 #git clone --recursive https://github.com/lbonn/rofi.git rofi-6801bd85bbfa59143b8ec443a05b22ef977b4349
