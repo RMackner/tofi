@@ -1,10 +1,23 @@
+%define githash fd0ef6bc1514a83dd18d74436cfe103444df1b6d
+
+%define githash2 42a145150cff135be377754486c504836ddea836
+
+%define githash3 b39df45e80fa6bcb40b1be8266d9d9b06854e19b
+
+%define shorthash %(c=%{githash}; echo ${c:0:10})
+
+
+
+
 Name:          rofi
 Version:       1.7.5
-Release:       2
+Release:       5.git.%{shorthash}%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement - fork with wayland support
 License:       MIT
 URL:           https://github.com/lbonn/%{name}/archive
-Source:        %{name}-%{version}.tar.gz
+Source0:       https://github.com/lbonn/rofi/archive/%{githash}.tar.gz
+Source2:       https://github.com/sardemff7/libgwater/archive/%{githash2}.tar.gz
+Source3:       https://github.com/sardemff7/libnkutils/archive/%{githash3}.tar.gz
 
 
 BuildArch: x86_64
@@ -39,7 +52,18 @@ BuildRequires: git
 %{summary}
 
 %prep
-git clone https://github.com/lbonn/rofi.git --recursive
+%autosetup -n %{name}-%{githash}
+cd /builddir/build/BUILD
+/usr/bin/tar xvf /builddir/build/SOURCES/libgwater-%{githash2}.tar.gz
+/usr/bin/tar xvf /builddir/build/SOURCES/libnkutils-%{githash3}.tar.gz
+cd libgwater-%{githash2}
+/usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+cd /builddir/build/BUILD
+cd libnkutils-%{githash3}
+/usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+cd /builddir/build/BUILD
+cp -r ./libgwater-%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
+cp -r ./libnkutils-%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
 %autosetup -n %{name}
 
 %build
