@@ -78,7 +78,9 @@ MESON_OPTIONS=(
 %install
 %meson_install
 
-%files
+%find_lang rofi
+	
+%files -f rofi.lang
 %{_datadir}/%{name}/themes/*
 %{_bindir}/rofi
 %{_bindir}/rofi-sensible-terminal
