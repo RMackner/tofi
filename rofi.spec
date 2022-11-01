@@ -163,9 +163,11 @@ cp -r ./libnkutils-%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
 	
 %build
 	
-%configure
-	
-%make_build
+MESON_OPTIONS=(
+    -Dcheck=disabled
+)
+%meson "${MESON_OPTIONS[@]}"
+%meson_build
 	
 	
 make doxy
@@ -180,20 +182,8 @@ find doc/html/html -name "*.md5" -delete
 	
 %install
 	
-%make_install
+%meson_install
 	
-	
- 
-	
-%check
-	
-make check || (cat ./test-suite.log; false)
-	
-desktop-file-validate %{buildroot}%{_datadir}/applications/rofi*.desktop
-	
- 
-	
- 
 	
 %files
 	
