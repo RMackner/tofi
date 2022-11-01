@@ -83,19 +83,19 @@ developing applications that use %{name}.
 	
  
 	
-%package        devel-doc
+#%package        devel-doc
 	
-Summary:        Documentation files for %{name}
+#Summary:        Documentation files for %{name}
 	
-BuildArch:      noarch
+#BuildArch:      noarch
 	
  
 	
-%description    devel-doc
+#%description    devel-doc
 	
-The %{name}-devel-doc package contains documentation files for developing
+#The %{name}-devel-doc package contains documentation files for developing
 	
-applications that use %{name}.
+#applications that use %{name}.
 	
  
 	
@@ -178,11 +178,11 @@ MESON_OPTIONS=(
 	
  
 	
-%files devel-doc
+#%files devel-doc
 	
-%license COPYING
+#%license COPYING
 	
-%doc doc/html/html/*
+#%doc doc/html/html/*
 	
  
 	
