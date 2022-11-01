@@ -1,7 +1,10 @@
+#rofi
 %define githash fd0ef6bc1514a83dd18d74436cfe103444df1b6d
 
+#libgwater
 %define githash2 42a145150cff135be377754486c504836ddea836
 
+#libnkutils
 %define githash3 b39df45e80fa6bcb40b1be8266d9d9b06854e19b
 
 %define shorthash %(c=%{githash}; echo ${c:0:10})
