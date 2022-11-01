@@ -54,16 +54,16 @@ BuildRequires: git
 %prep
 %autosetup -n %{name}-%{githash}
 cd /builddir/build/BUILD
-/usr/bin/tar xvf /builddir/build/SOURCES/libgwater-%{githash2}.tar.gz
-/usr/bin/tar xvf /builddir/build/SOURCES/libnkutils-%{githash3}.tar.gz
-cd libgwater-%{githash2}
+/usr/bin/tar xvf /builddir/build/SOURCES/%{githash2}.tar.gz
+/usr/bin/tar xvf /builddir/build/SOURCES/%{githash3}.tar.gz
+cd %{githash2}
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 cd /builddir/build/BUILD
-cd libnkutils-%{githash3}
+cd %{githash3}
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 cd /builddir/build/BUILD
-cp -r ./libgwater-%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
-cp -r ./libnkutils-%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
+cp -r ./%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
+cp -r ./%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
 
 %build
 MESON_OPTIONS=(
