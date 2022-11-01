@@ -33,7 +33,7 @@ BuildRequires: pkgconfig(xcb-xinerama)
 BuildRequires: pkgconfig(xcb-xkb)
 BuildRequires: pkgconfig(xkbcommon)
 BuildRequires: pkgconfig(xkbcommon-x11)
-
+BuildRequires: git
 
 %description
 %{summary}
