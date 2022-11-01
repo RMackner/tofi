@@ -59,7 +59,7 @@ BuildRequires: git
 cd /builddir/build/BUILD
 /usr/bin/tar xvf /builddir/build/SOURCES/%{githash2}.tar.gz
 /usr/bin/tar xvf /builddir/build/SOURCES/%{githash3}.tar.gz
-cd lingwater-%{githash2}
+cd libgwater-%{githash2}
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 cd /builddir/build/BUILD
 cd libnkutils-%{githash3}
