@@ -59,14 +59,14 @@ BuildRequires: git
 cd /builddir/build/BUILD
 /usr/bin/tar xvf /builddir/build/SOURCES/%{githash2}.tar.gz
 /usr/bin/tar xvf /builddir/build/SOURCES/%{githash3}.tar.gz
-cd %{githash2}
+cd lingwater-%{githash2}
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 cd /builddir/build/BUILD
-cd %{githash3}
+cd libnkutils-%{githash3}
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 cd /builddir/build/BUILD
-cp -r ./%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
-cp -r ./%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
+cp -r ./libgwater-%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
+cp -r ./libnkutils-%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
 
 %build
 MESON_OPTIONS=(
