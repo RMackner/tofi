@@ -154,7 +154,7 @@ MESON_OPTIONS=(
 	
 %{_datadir}/applications/rofi-theme-selector.desktop
 	
-%{_datadir}/icons/hicolor/apps/rofi.svg
+%{_datadir}/icons/*
 	
 %{_mandir}/man1/rofi*
 	
