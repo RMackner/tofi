@@ -1,16 +1,11 @@
-%define githash fd0ef6bc1514a83dd18d74436cfe103444df1b6d
-
-%define shorthash %(c=%{githash}; echo ${c:0:10})
-
 Name:          rofi
 Version:       1.7.5
-Release:       1.git.%{shorthash}%{?dist}
+Release:       1
 Summary:       A window switcher, run dialog and dmenu replacement - fork with wayland support
 License:       MIT
 URL:           https://github.com/lbonn/%{name}/archive
-Source:        ./%{name}-%{githash}.tar.gz
+Source:        %{url}/refs/tags/%{version}+wayland1.tar.gz
 
-#git clone --recursive https://github.com/lbonn/rofi.git rofi-6801bd85bbfa59143b8ec443a05b22ef977b4349
 
 BuildArch: x86_64
 Requires: xcb-util-cursor
@@ -44,7 +39,7 @@ BuildRequires: pkgconfig(xkbcommon-x11)
 %{summary}
 
 %prep
-%autosetup -n %{name}-%{githash}
+%autosetup -n %{name}-%{version}-wayland1
 
 %build
 MESON_OPTIONS=(
