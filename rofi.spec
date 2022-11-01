@@ -64,7 +64,6 @@ cd libnkutils-%{githash3}
 cd /builddir/build/BUILD
 cp -r ./libgwater-%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
 cp -r ./libnkutils-%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
-%autosetup -n %{name}
 
 %build
 MESON_OPTIONS=(
