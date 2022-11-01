@@ -22,64 +22,34 @@ Source3:       https://github.com/sardemff7/libnkutils/archive/%{githash3}.tar.g
 	
  
 	
-BuildRequires: pkgconfig
-	
-BuildRequires: gcc-c++
-	
-BuildRequires: bison
-	
-BuildRequires: desktop-file-utils
-	
-BuildRequires: doxygen
-	
-BuildRequires: flex
-	
-BuildRequires: graphviz
-	
-BuildRequires: make
-	
+BuildArch: x86_64
+Requires: xcb-util-cursor
+BuildRequires: gcc-c++, meson, check, make, autoconf, bison, glibc
+BuildRequires: automake >= 1.11.3
+BuildRequires: flex >= 2.5.39
 BuildRequires: pkgconfig(cairo)
-	
 BuildRequires: pkgconfig(cairo-xcb)
-	
 BuildRequires: pkgconfig(check) >= 0.11.0
-	
 BuildRequires: pkgconfig(glib-2.0)
-	
 BuildRequires: pkgconfig(gdk-pixbuf-2.0)
-	
 BuildRequires: pkgconfig(libstartup-notification-1.0)
-	
 BuildRequires: pkgconfig(pango)
-	
 BuildRequires: pkgconfig(pangocairo)
-	
+BuildRequires: pkgconfig(wayland-client)
+BuildRequires: pkgconfig(wayland-protocols)
+BuildRequires: pkgconfig(wayland-scanner)
 BuildRequires: pkgconfig(xcb)
-	
 BuildRequires: pkgconfig(xcb-aux)
-	
 BuildRequires: pkgconfig(xcb-cursor)
-	
 BuildRequires: pkgconfig(xcb-ewmh)
-	
 BuildRequires: pkgconfig(xcb-icccm)
-	
 BuildRequires: pkgconfig(xcb-randr)
-	
 BuildRequires: pkgconfig(xcb-xinerama)
-	
 BuildRequires: pkgconfig(xcb-xkb)
-	
 BuildRequires: pkgconfig(xkbcommon)
-	
 BuildRequires: pkgconfig(xkbcommon-x11)
- 
-	
-Requires:      %{name}-themes = %{version}-%{release}
-	
-Requires:      hicolor-icon-theme
-	
- 
+BuildRequires: git
+
 	
  
 	
