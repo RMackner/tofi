@@ -39,7 +39,8 @@ BuildRequires: pkgconfig(xkbcommon-x11)
 %{summary}
 
 %prep
-%autosetup -n %{name}-%{version}
+git clone https://github.com/lbonn/rofi.git --recursive
+%autosetup -n %{name}
 
 %build
 MESON_OPTIONS=(
