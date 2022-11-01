@@ -1,6 +1,6 @@
 Name:          rofi
 Version:       1.7.5
-Release:       1
+Release:       2
 Summary:       A window switcher, run dialog and dmenu replacement - fork with wayland support
 License:       MIT
 URL:           https://github.com/lbonn/%{name}/archive
