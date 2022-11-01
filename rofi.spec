@@ -156,32 +156,15 @@ cd libnkutils-%{githash3}
 cd /builddir/build/BUILD
 cp -r ./libgwater-%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
 cp -r ./libnkutils-%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
-	
- 
-	
- 
-	
+
 %build
-	
 MESON_OPTIONS=(
     -Dcheck=disabled
 )
 %meson "${MESON_OPTIONS[@]}"
 %meson_build
-	
-	
-make doxy
-	
-find doc/html/html -name "*.map" -delete
-	
-find doc/html/html -name "*.md5" -delete
-	
- 
-	
- 
-	
+
 %install
-	
 %meson_install
 	
 	
