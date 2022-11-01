@@ -4,7 +4,7 @@ Release:       2
 Summary:       A window switcher, run dialog and dmenu replacement - fork with wayland support
 License:       MIT
 URL:           https://github.com/lbonn/%{name}/archive
-Source:        %{name}-%{version}.tzr.gz
+Source:        %{name}-%{version}.tar.gz
 
 
 BuildArch: x86_64
