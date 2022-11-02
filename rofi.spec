@@ -1,14 +1,17 @@
+##-------git-versions-----------------------------------
+
 #rofi
 %define githash fd0ef6bc1514a83dd18d74436cfe103444df1b6d
 
-#libgwater
+%define sub1     libgwater
 %define githash2 42a145150cff135be377754486c504836ddea836
 
-#libnkutils
+%define sub2     libnkutils
 %define githash3 b39df45e80fa6bcb40b1be8266d9d9b06854e19b
 
 %define shorthash %(c=%{githash}; echo ${c:0:10})
 
+#------------Application-----------------------------------
 
 Name:          rofi
 Version:       1.7.5
@@ -16,12 +19,17 @@ Release:       5.git.%{shorthash}%{?dist}
 Summary:       A window switcher, run dialog and dmenu replacement - fork with wayland support
 License:       MIT
 URL:           https://github.com/lbonn/%{name}/archive
-Source0:       https://github.com/lbonn/rofi/archive/%{githash}.tar.gz
-Source2:       https://github.com/sardemff7/libgwater/archive/%{githash2}.tar.gz
-Source3:       https://github.com/sardemff7/libnkutils/archive/%{githash3}.tar.gz
+
+
+#-------------Source---------------------------------------
+
+Source0:       %{url}/%{githash}.tar.gz
+Source2:       https://github.com/sardemff7/%{sub1}/archive/%{githash2}.tar.gz
+Source3:       https://github.com/sardemff7/%{sub2}/archive/%{githash3}.tar.gz
 	
  
-	
+#--------------Build-Requirements------------------------
+
 BuildArch: x86_64
 Requires: xcb-util-cursor
 BuildRequires: gcc-c++, meson, check, make, autoconf, bison, glibc
@@ -56,11 +64,8 @@ BuildRequires: git
 %description
 	
 Rofi is a dmenu replacement. Rofi, like dmenu, will provide the user with a
-	
 textual list of options where one or more can be selected. This can either be,
-	
 running an application, selecting a window or options provided by an external
-	
 script.
 	
  
@@ -68,9 +73,7 @@ script.
 %package        devel
 	
 Summary:        Development files for %{name}
-	
 Requires:       %{name} = %{version}-%{release}
-	
 Requires:       pkgconfig
 	
  
@@ -78,7 +81,6 @@ Requires:       pkgconfig
 %description    devel
 	
 The %{name}-devel package contains libraries and header files for
-	
 developing applications that use %{name}.
 	
  
@@ -86,7 +88,6 @@ developing applications that use %{name}.
 #%package        devel-doc
 	
 #Summary:        Documentation files for %{name}
-	
 #BuildArch:      noarch
 	
  
@@ -94,7 +95,6 @@ developing applications that use %{name}.
 #%description    devel-doc
 	
 #The %{name}-devel-doc package contains documentation files for developing
-	
 #applications that use %{name}.
 	
  
@@ -102,7 +102,6 @@ developing applications that use %{name}.
 %package        themes
 	
 Summary:        Themes for %{name}
-	
 BuildArch:      noarch
 	
  
@@ -112,20 +111,21 @@ BuildArch:      noarch
 The %{name}-themes package contains themes for %{name}.
 	
  
-	
+#---------------Build-Install---------------------------------	
+
 %prep
 %autosetup -n %{name}-%{githash}
 cd /builddir/build/BUILD
 /usr/bin/tar xvf /builddir/build/SOURCES/%{githash2}.tar.gz
 /usr/bin/tar xvf /builddir/build/SOURCES/%{githash3}.tar.gz
-cd libgwater-%{githash2}
+cd %{sub1}-%{githash2}
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 cd /builddir/build/BUILD
-cd libnkutils-%{githash3}
+cd %{sub2}-%{githash3}
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 cd /builddir/build/BUILD
-cp -r ./libgwater-%{githash2}/* ./%{name}-%{githash}/subprojects/libgwater/
-cp -r ./libnkutils-%{githash3}/* ./%{name}-%{githash}/subprojects/libnkutils/
+cp -r ./%{sub1}-%{githash2}/* ./%{name}-%{githash}/subprojects/%{sub1}/
+cp -r ./%{sub2}-%{githash3}/* ./%{name}-%{githash}/subprojects/%{sub2}/
 
 %build
 MESON_OPTIONS=(
@@ -137,27 +137,19 @@ MESON_OPTIONS=(
 %install
 %meson_install
 	
-	
+#---------------Files-------------------------------------
+
 %files
 	
 %doc README.md
-	
 %license COPYING
-	
 %{_bindir}/rofi
-	
 %{_bindir}/rofi-sensible-terminal
-	
 %{_bindir}/rofi-theme-selector
-	
 %{_datadir}/applications/rofi.desktop
-	
 %{_datadir}/applications/rofi-theme-selector.desktop
-	
 %{_datadir}/icons/*
-	
 %{_mandir}/man1/rofi*
-	
 %{_mandir}/man5/rofi*
 	
  
@@ -165,7 +157,6 @@ MESON_OPTIONS=(
 %files themes
 	
 %license COPYING
-	
 %{_datarootdir}/rofi
 	
  
@@ -173,15 +164,13 @@ MESON_OPTIONS=(
 %files devel
 	
 %{_includedir}/rofi
-	
 %{_libdir}/pkgconfig/rofi.pc
 	
  
 	
 #%files devel-doc
-	
+
 #%license COPYING
-	
 #%doc doc/html/html/*
 	
  
